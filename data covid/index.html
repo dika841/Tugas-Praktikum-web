@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Randika web</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+  </head>
+  <body>
+    <div id="app" class="flex items-center justify-center width-auto h-screen flex-col ap-y-4">
+        
+        <img :src="profileUser" class="w-[200px] rounded-full">
+        <h1 class="text-4xl font-bold text-black-900">{{nameUser}} {{lastName}}</h1>
+        <button @click="generateUser()" class="bg-blue-400 w-[200px] h-[50px]">Generate User</button>
+    <script src="./index.js"></script>
+  </body>
+</html>

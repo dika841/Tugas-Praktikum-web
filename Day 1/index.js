@@ -17,7 +17,7 @@ const generateUmur=()=>{
 btnNama1.addEventListener("click",generateUmur);
 btnNama.addEventListener("click",generateNama);*/
 
-const app = document.getElementById("app");
+/*const app = document.getElementById("app");
 const output = document.getElementById("output");
 const btnNama1 = document.getElementById("btn-2");
 const input = document.getElementById("input");
@@ -43,7 +43,7 @@ const image = document.getElementById("image");
   
 };*/
 
-const generateHewan = () => {
+/*const generateHewan = () => {
   let result = input.value.toUpperCase();
   console.log(result);
 
@@ -60,4 +60,24 @@ const generateHewan = () => {
     image.src =
       "https://imgs.search.brave.com/NirJh5OhRJhxBbx_2pljq7OjGpluUNtdkKmUCgdsWkw/rs:fit:1068:601:1/g:ce/aHR0cDovL2kwLmt5/bS1jZG4uY29tL2Vu/dHJpZXMvaWNvbnMv/ZmFjZWJvb2svMDAw/LzAyNi8xNTIvZ2ln/YWNoYWQuanBn";
   }
-};
+};*/
+
+const { createApp, ref } = Vue;
+
+const app = createApp({
+  setup() {
+    const kegiatan = ref("");
+    const dataKegiatan = ref(["Makan", "Minum"]);
+    const tambahKegiatan = () => {
+      dataKegiatan.value.push(kegiatan.value);
+    };
+
+    return {
+      kegiatan,
+      dataKegiatan,
+      tambahKegiatan,
+    };
+  },
+});
+
+app.mount("#app");

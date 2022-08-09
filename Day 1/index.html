@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Randika web</title>
-    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div id="app">
@@ -16,7 +16,12 @@
       <!--<input id="input" type="text" placeholder="Masukkan Warna">
        <button onclick="generateColor()" id="btn-2">Rubah warna</button>-->
       <br />
-      <input id="input" type="text" placeholder="Masukkan Nama Hewan" />
+      <input
+        class="border-[1px] rounded-full hover:drop-shadow-md hover:border-white focus:outline-none"
+        id="input"
+        type="text"
+        placeholder="Masukkan Nama Hewan"
+      />
       <button onclick="generateHewan()" id="btn-2">Tampilkan Gambar</button>
     </div>
     <script src="./index.js"></script>
